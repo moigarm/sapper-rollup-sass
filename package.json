@@ -1,6 +1,6 @@
 {
-  "name": "todo",
-  "description": "TODO",
+  "name": "sapper-rollup-sass-bulma",
+  "description": "A copy of the official Sapper/Svelte template of 10102020 -- DD/MM/YYYY, with aditional configuration in order to compile Sass and Scss directly from components and may be later Bulma itself",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
@@ -9,7 +9,9 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "css-build": "node-sass --omit-source-map-url static/style.scss static/style.css",
+    "css-watch": "yarn run css-build -- --watch"
   },
   "dependencies": {
     "compression": "^1.7.1",

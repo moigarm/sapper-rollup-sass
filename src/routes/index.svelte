@@ -1,8 +1,15 @@
-<!-- <style lang="sass">
-	
-	@import '.././styles/main.sass';
+<script>
 
-</style> -->
+	import Button from './Button.svelte'
+	let message = "message from button"
+</script>
+
+<style lang="sass" global>
+
+	@import '../../node_modules/bulma/sass/utilities/_all.sass'
+	@import '../../node_modules/bulma/sass/elements/button.sass';
+	
+</style>
 
 <!-- <style>
 	h1, figure, p {
@@ -45,11 +52,12 @@
 
 <h1>Great success!</h1>
 
-<figure>
+<figure class="is-h-centered">
 	<img alt='Success Kid' src='successkid.jpg'>
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
 <p><strong>Try editing this file (src/routes/index.svelte)</strong></p>
 
-<button>Hello</button>
+<button class="button is-primary">Hello</button>
+<Button {message}/>

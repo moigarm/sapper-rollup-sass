@@ -22,8 +22,8 @@ const preprocess = sveltePreprocess({
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
-
-const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
+// warning.code === "css-unused-selector is for skip warning, used for classes of Bulma that are not used at that moment"
+const onwarn = (warning, onwarn) => ( warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || warnin.code === "css-unused-selector" || onwarn(warning) ;
 
 export default {
 	client: {
