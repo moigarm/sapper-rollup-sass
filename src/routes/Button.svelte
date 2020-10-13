@@ -1,7 +1,8 @@
 <script>
 
     export let message = "";
+    export let modifier = "";
 
 </script>
 
-<button class="button is-primary">{message}</button>
+<button class="button is-{modifier}">{message}</button>
